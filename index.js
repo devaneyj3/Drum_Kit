@@ -1,52 +1,49 @@
 
-let letterArray = ["w", "a", "s", "d", "j","k","l"];
+document.getElementById("instructions").textContent = "Enter the corresponding key on the keybord";
 
-for(let count = 0; count < letterArray.length; count++)
-{
-    document.getElementById(letterArray[count] +'_drum').addEventListener("click", function()
-    {
-        var innerHTML = this.innerHTML;
-        switch (innerHTML) {
-            case "w":
-                var tom1 = new Audio("sounds/tom-1.mp3");
-                tom1.play();
-            break;
+document.addEventListener("keydown", function(event) {
 
-            case "a":
-                var tom2 = new Audio("sounds/tom-2.mp3");
-                tom2.play();
-            break;
+    var innerHTML = event.key;
+    switch (innerHTML) {
+        case "w":
+            var tom1 = new Audio("sounds/tom-1.mp3");
+            tom1.play();
+        break;
 
-            case "s":
-                var tom3 = new Audio("sounds/tom-3.mp3");
-                tom3.play();
-            break;
+        case "a":
+            var tom2 = new Audio("sounds/tom-2.mp3");
+            tom2.play();
+        break;
 
-            case "d":
-                var tom4 = new Audio("sounds/tom-4.mp3");
-                tom4.play();
-            break;
+        case "s":
+            var tom3 = new Audio("sounds/tom-3.mp3");
+            tom3.play();
+        break;
 
-            case "j":
-                var snare = new Audio("sounds/snare.mp3");
-                snare.play();
-            break;
+        case "d":
+            var tom4 = new Audio("sounds/tom-4.mp3");
+            tom4.play();
+        break;
 
-            case "k":
-                var crash = new Audio("sounds/crash.mp3");
-                crash.play();
-            break;
+        case "j":
+            var snare = new Audio("sounds/snare.mp3");
+            snare.play();
+        break;
 
-            case "l":
-                var kickBass = new Audio("sounds/kick-bass.mp3");
-                kickBass.play();
+        case "k":
+            var crash = new Audio("sounds/crash.mp3");
+            crash.play();
+        break;
+
+        case "l":
+            var kickBass = new Audio("sounds/kick-bass.mp3");
+            kickBass.play();
+        break;
+
+        default:
             break;
-    
-            default:
-            console.log(innerHTML);
-                break;
-        }
-    
-    })
-}
+    }
+
+})
+
 
