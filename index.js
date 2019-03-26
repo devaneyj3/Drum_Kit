@@ -5,7 +5,8 @@ for(let count = 0; count < letterArray.length; count++)
 {
     document.getElementById(letterArray[count] +'_drum').addEventListener("click", function()
     {
-        alert("I got clicked");
+       var audio = new Audio("sounds/tom-1.mp3");
+       audio.play();
     })
 }
 
