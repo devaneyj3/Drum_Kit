@@ -1,5 +1,5 @@
 
-document.getElementById("instructions").textContent = "Enter the corresponding key on the keybord";
+document.getElementById("instructions").textContent = "Enter the corresponding key on the keyboard";
 
 document.addEventListener("keydown", function(event) {
 
@@ -42,7 +42,20 @@ document.addEventListener("keydown", function(event) {
 
         default:
             break;
+
+        
     }
+    ButtonAnimation(innerHTML);
+
+    function ButtonAnimation(currentKey)
+    {
+        var activeButton = document.querySelector("." + currentKey);
+        activeButton.classList.add("pressed");
+        setTimeout(() => {
+            activeButton.classList.remove("pressed");
+        }, 100);
+    }
+
 
 })
 
