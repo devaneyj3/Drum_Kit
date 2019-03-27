@@ -3,6 +3,8 @@ document.getElementById("instructions").textContent = "Enter the corresponding k
 
 document.addEventListener("keydown", function(event) {
 
+    focus();
+
     var innerHTML = event.key;
     switch (innerHTML) {
         case "w":
