@@ -69,6 +69,7 @@ function makeSound() {
 
         
     }
+}
     ButtonAnimation(innerHTML);
 
     function ButtonAnimation(currentKey)
@@ -81,6 +82,6 @@ function makeSound() {
     }
 
 
-})
+
 
 
